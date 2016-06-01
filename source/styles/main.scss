@@ -11,18 +11,53 @@ $divider-color:        #B6B6B6;
 
 body{
 	margin: 0;
+	-webkit-font-smoothing:antialiased;
+	color: #727272;
+}
+a {
+	text-decoration: none;
 }
 .app-header{
 	background-color: $primary-color;
 	height: 80px;
+	border-bottom: 2px solid #fff59d;
+	flex-shrink: 0;
 }
 .app-footer{
 	background-color: $primary-color;
 	height: 80px;
+	border-top: 1px solid #e6e6e6;
+	flex-shrink: 0;
+	display: flex;
+	a {
+		text-decoration: center;
+		padding:15px;
+		flex-grow: 1;
+		border-left:2px solid rgba(0,0,0,0.1);
+		&:first-child{
+			border-left:0px;
+		}
+		i {
+			display: block;
+			font-size: 25px;
+			color:white;
+			text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+			padding-bottom: 10px;
+
+		}
+	}
+}
+.app-wrapper{
+	height: 100vh;
+	display: flex;
+	flex-shrink: 0;
+	flex-direction: column;
 }
 .content{
 	background-color: #fafafa;
 	line-height: 1.8;
 	padding:16px;
+	overflow-y: scroll;
+	flex-grow: 1;
 }
 
